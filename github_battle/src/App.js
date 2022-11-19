@@ -5,8 +5,8 @@ import Stars from "./components/Stars";
 import GroupBattle from "./components/GroupBattle.js"
 import Battle from "./components/Battle";
 
-class App extends React.Component{
-    constructor(props){
+class App extends React.Component {
+    constructor(props) {
         super(props);
         this.state = {
             darkMode: false
@@ -14,11 +14,11 @@ class App extends React.Component{
     }
 
     toggleDarkMode = () => {
-        this.setState((prevState) => ({darkMode: !prevState.darkMode}));
+        this.setState((prevState) => ({ darkMode: !prevState.darkMode }));
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <div className={this.state.darkMode ? "bg-gray-900 text-white min-h-screen " : ""}>
                 <BrowserRouter>
                     <Header toggleDarkMode={this.toggleDarkMode} {...this.state} />
@@ -28,8 +28,8 @@ class App extends React.Component{
                     <Route path="/battle" exact>
                         <GroupBattle {...this.state} />
                     </Route>
-                    <Route path="/userbattle" Component={Battle} {...this.state}>
-
+                    <Route path="/userbattle" exact>
+                        <Battle  {...this.state} />
                     </Route>
                 </BrowserRouter>
             </div>

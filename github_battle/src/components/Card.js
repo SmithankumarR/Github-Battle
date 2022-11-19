@@ -5,7 +5,7 @@ function Card(props) {
     return (
         <div className={
             props.darkMode ?
-                'w-1/4 m-2  bg-gray-500 p-6 rounded-md flex flex-col items center'
+                'w-1/4 m-2  bg-gray-700 p-6 rounded-md flex flex-col items center'
                 : 'w-1/4 m-2  bg-gray-200 p-6 rounded-md flex flex-col items-center'
         }>
 

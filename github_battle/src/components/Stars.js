@@ -1,7 +1,7 @@
 import React from 'react';
 import AllCard from "./AllCard";
 
-class GitHubStars extends React.Component {
+class Stars extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -117,4 +117,4 @@ class GitHubStars extends React.Component {
         );
     }
 }
-export default GitHubStars;
+export default Stars;
